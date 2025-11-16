@@ -81,6 +81,10 @@ button:disabled {
   margin-bottom: 1.25rem;
 }
 
+.hidden {
+  display: none !important;
+}
+
 textarea {
   width: 100%;
   min-height: 320px;
