@@ -8,11 +8,18 @@
 
 body {
   margin: 0;
-  padding: 2rem 1rem 4rem;
+  padding: 0 0 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
+}
+
+.dv-header {
+  width: 100%;
+  margin: 0;
+  align-self: stretch;
+  display: block;
 }
 
 main {
@@ -21,6 +28,7 @@ main {
   border-radius: 16px;
   padding: 2rem;
   box-shadow: 0 12px 30px rgba(5, 17, 61, 0.1);
+  margin: 2rem 1rem 0;
 }
 
 h1 {
@@ -116,7 +124,7 @@ textarea {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-top: 2rem;
+  margin: 2rem 1rem 0;
   font-size: 0.95rem;
 }
 
@@ -131,4 +139,8 @@ textarea {
 
 .site-footer .divider {
   color: #9aa7c2;
+}
+
+dataviz-header {
+  width: 100% !important;
 }
