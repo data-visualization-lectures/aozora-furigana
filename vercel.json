@@ -1,4 +1,12 @@
 {
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "aozora-furigana.dataviz.jp" }],
+      "destination": "https://aozora-furigana.dataprep.jp/:path*",
+      "permanent": true
+    }
+  ],
   "builds": [
     { "src": "api/convert.py", "use": "@vercel/python" },
     { "src": "index.html", "use": "@vercel/static" },
