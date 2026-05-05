@@ -13,6 +13,12 @@
     { "src": "static/**/*", "use": "@vercel/static" }
   ],
   "routes": [
+    {
+      "src": "/(.*)",
+      "has": [{ "type": "host", "value": "aozora-furigana.dataviz.jp" }],
+      "status": 308,
+      "headers": { "Location": "https://aozora-furigana.dataprep.jp/$1" }
+    },
     { "src": "/api/convert", "dest": "api/convert.py" },
     { "src": "/(.*)", "dest": "/$1" }
   ]
