@@ -1,9 +1,9 @@
 :root {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+  font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     sans-serif;
   line-height: 1.5;
-  color: #1b1b1f;
-  background: #f8f8fb;
+  color: #111827;
+  background: #fafafa;
 }
 
 body {
@@ -25,15 +25,16 @@ body {
 main {
   width: min(960px, 100%);
   background: #fff;
-  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
   padding: 2rem;
-  box-shadow: 0 12px 30px rgba(5, 17, 61, 0.1);
+  box-shadow: 0 1px 3px rgba(17, 24, 39, 0.08);
   margin: 2rem 1rem 0;
 }
 
 h1 {
   margin-top: 0;
-  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-size: clamp(1.5rem, 4vw, 1.875rem);
 }
 
 form {
@@ -45,26 +46,47 @@ form {
 
 input[type="url"] {
   flex: 1;
+  min-height: 44px;
   padding: 0.85rem 1rem;
-  border-radius: 8px;
-  border: 1px solid #c5c8d2;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
   font-size: 1rem;
+}
+
+input[type="url"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #0f6cbd;
+  box-shadow: 0 0 0 3px rgba(15, 108, 189, 0.14);
 }
 
 button {
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
+  min-height: 44px;
   padding: 0.85rem 1.5rem;
   font-size: 1rem;
   font-weight: 600;
   color: #fff;
-  background: #0068ff;
+  background: #0f6cbd;
   cursor: pointer;
+  transition: filter 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+button:hover {
+  filter: brightness(0.7);
 }
 
 button.secondary {
-  background: #f1f4fb;
-  color: #1b1b1f;
+  background: #fff;
+  border: 1px solid #d1d5db;
+  color: #111827;
+}
+
+button.secondary:hover {
+  background: #f3f4f6;
+  border-color: #0f6cbd;
+  filter: none;
 }
 
 button:disabled {
@@ -96,8 +118,8 @@ button:disabled {
 textarea {
   width: 100%;
   min-height: 320px;
-  border-radius: 12px;
-  border: 1px solid #c5c8d2;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
   font-size: 1rem;
   padding: 1rem;
   resize: vertical;
@@ -110,14 +132,14 @@ textarea {
 }
 
 .hint {
-  color: #4c5568;
+  color: #4b5563;
   margin-bottom: 0.5rem;
 }
 
 .sample {
   font-family: "SFMono-Regular", Menlo, Consolas, monospace;
   font-size: 0.9rem;
-  color: #4c5568;
+  color: #4b5563;
 }
 
 .site-footer {
@@ -129,7 +151,7 @@ textarea {
 }
 
 .site-footer a {
-  color: #0068ff;
+  color: #0f6cbd;
   text-decoration: none;
 }
 
@@ -143,4 +165,22 @@ textarea {
 
 dataviz-header {
   width: 100% !important;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 2rem;
+  }
+
+  main {
+    padding: 1.5rem 1rem;
+    margin-top: 1rem;
+  }
+
+  form,
+  .button-group,
+  .download-box {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
